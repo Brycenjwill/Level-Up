@@ -132,6 +132,14 @@ namespace LvlUpCs.Controllers
 		[HttpPost("InsertNewUser")]
 		public void InsertUser(string username, string password, string email)
 		{
+
+			if (DatabaseController.CheckEmailExists(email))
+			{
+				
+				return;
+
+			}
+
 			string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
 			string connectionString = "Server=levelup.cdkokcmcwbfz.us-east-2.rds.amazonaws.com;Database=levelup;User=admin;Password=ihack2024!;";
