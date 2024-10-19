@@ -6,7 +6,7 @@ export const postLogin = (username, password) => {
         "password": password
     };
 
-    response = fetch(url, {
+    return fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -18,7 +18,6 @@ export const postLogin = (username, password) => {
         console.error('Error:', error);
     });
 
-    return organizeTasksByTree(response.body)
 };
 
 function organizeTasksByTree(tasks) {
