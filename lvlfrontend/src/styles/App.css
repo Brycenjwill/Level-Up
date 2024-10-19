@@ -49,7 +49,7 @@ main {
   padding: 20px;
 }
 
-.active.carousel-item{
+.carousel-item{
   min-height: 100%;
   background-color: black;
 }
