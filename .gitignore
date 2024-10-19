@@ -7,11 +7,10 @@
 /LvlUpCs/obj
 /LvlUpCs/obj
 /LvlUpCs/.vs
-/lvlfrontend/node_modules
-/lvlfrontend/node_modules
-/lvlfrontend/node_modules/.cache
+
 /LvlUpCs/obj/Debug/net8.0
 LvlUpCs/obj/Debug/net8.0/LvlUpCs.AssemblyInfo.cs
 LvlUpCs/obj/Debug/net8.0/LvlUpCs.AssemblyInfoInputs.cache
 LvlUpCs/obj/Debug/net8.0/LvlUpCs.assets.cache
 LvlUpCs/obj/Debug/net8.0/LvlUpCs.GeneratedMSBuildEditorConfig.editorconfig
+/LvlUpCs/bin/Release/net8.0

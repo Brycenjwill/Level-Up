@@ -45,6 +45,12 @@ html, body {
   width: 100%;
 }
 
+/* Hide the carousel indicators (dots) */
+.carousel-indicators {
+  display: none;
+}
+
+
 .App {
   text-align: center;
 }
@@ -57,4 +63,52 @@ main {
 .carousel-item{
   min-height: 100%;
   background-color: black;
+}
+
+#tree {
+  align-items: center;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+#str1 {
+  height: 80%;
+  align-content: center;
+}
+#str2 {
+  height: 100%;
+  align-content: center;
+}
+#str3 {
+  height: 100%;
+  align-content: center;
+}
+
+#int1 {
+  height: 100%;
+  align-content: center;
+}
+#int2 {
+  height: 100%;
+  align-content: center;
+}
+#int3 {
+  height: 100%;
+  align-content: center;
+}
+
+#soc1 {
+  height: 100%;
+  align-content: center;
+}
+#soc2 {
+  height: 100%;
+  align-content: center;
+}
+#soc3 {
+  height: 100%;
+  align-content: center;
 }
