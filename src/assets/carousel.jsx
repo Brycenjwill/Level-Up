@@ -1,50 +1,54 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CustomCarousel = () => {
+
+function ControlledCarousel() {
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} pause={null}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img
+      <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Physo Tree</h3>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+      <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Intello Tree</h3>
-          
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+      <img
           className="d-block w-100"
           src="https://via.placeholder.com/800x400"
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Social Tree</h3>
-          
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
-};
+}
 
-export default CustomCarousel;
+export default ControlledCarousel;
