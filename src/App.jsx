@@ -5,18 +5,15 @@ import Intel from "./pages/intel";
 import Login from "./pages/login";
 import Social from "./pages/social";
 import Header from "./assets/header";
-import Body from "./assets/body";
+import ControlledCarousel from "./assets/carousel";
 import '../src/styles/App.css';
 
 
 function App() {
-  
-  
 
   return (
 
-    <div>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <div className="header"><Header /></div>
           <Routes>
             <Route path="/login" element={<Login />}/>;
@@ -24,13 +21,12 @@ function App() {
             <Route path="/social" element={<Social />}/>;
             <Route path="/physical" element={<Physical />}/>;
           </Routes>
-    </BrowserRouter>
-    <Body />
-    </div>
+    </BrowserRouter> */}
     
+  )  
 
     
-  )
+
 }
 
 export default App;
