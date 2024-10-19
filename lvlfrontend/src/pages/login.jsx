@@ -1,9 +1,11 @@
-
-
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useGlobalState } from './GlobalState';  // Assuming you have a GlobalState setup
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { dispatch } = useGlobalState();  // Get the dispatch from global state
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,18 +19,42 @@ const Login = () => {
 
     try {
       const response = await fetch('https://lvlupcs.azurewebsites.net/api/Database/ValidateUserLogin', {
-        method: 'POST', // Specifies the request method
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json' // Ensure the request is JSON
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(requestBody) // Stringify the body of the request
+        body: JSON.stringify(requestBody)
       });
 
-      const result = await response.json(); // Parse the JSON response
+      const result = await response.json();
       if (response.ok) {
-        console.log('Success:', result);
+        const { userid, token } = result;  // Extract userid and token from the response
+
+        // Fetch user tasks
+        const taskResponse = await fetch('https://lvlupcs.azurewebsites.net/api/Database/GetUserTasks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`  // Assuming your API requires the token as a Bearer token
+          },
+          body: JSON.stringify({ userid, sessionToken: token })
+        });
+
+        const taskResult = await taskResponse.json();
+        if (taskResponse.ok) {
+          // Store user tasks in global state
+          dispatch({
+            type: 'SET_USER_TASKS',
+            payload: taskResult,
+          });
+
+          // Navigate to home page after successful login and task fetch
+          navigate('/');
+        } else {
+          console.error('Error fetching tasks:', taskResult);
+        }
       } else {
-        console.error('Error:', result);
+        console.error('Login error:', result);
       }
     } catch (error) {
       console.error('Network error:', error);
