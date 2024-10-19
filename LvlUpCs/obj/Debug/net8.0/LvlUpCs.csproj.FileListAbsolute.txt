@@ -104,3 +104,11 @@ C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\obj\Debug\net8.0\refint\LvlUpCs
 C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\obj\Debug\net8.0\LvlUpCs.pdb
 C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\obj\Debug\net8.0\LvlUpCs.genruntimeconfig.cache
 C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\obj\Debug\net8.0\ref\LvlUpCs.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bryce\Documents\GitHub\Level-Up\LvlUpCs\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
