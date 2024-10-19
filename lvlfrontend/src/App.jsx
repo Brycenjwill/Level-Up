@@ -5,6 +5,8 @@ import Login from "./pages/login";
 import Header from "./assets/header";
 import ControlledCarousel from "./assets/carousel";
 import '../src/styles/App.css';
+import '../src/styles/Header.css'
+import '../src/styles/Login.css'
 
 
 function App() {

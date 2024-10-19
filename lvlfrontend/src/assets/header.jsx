@@ -9,9 +9,17 @@ const Header = () => {
     return (   
         <div>
                 <Button id='LoginButt' href="./login">Login</Button>
-                <div id='progressbox'>
+
+                <div>
                     <ProgressBar id='total_progress' now={50}/>    
                 </div>
+
+                <div className='image'>
+                    <image className="image" href='./normal.png' />
+                </div>
+                
+
+
                 
         </div>
     )
