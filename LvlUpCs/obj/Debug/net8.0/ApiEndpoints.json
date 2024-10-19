@@ -53,6 +53,22 @@
   },
   {
     "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "Logout",
+    "RelativePath": "api/Database/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoutRequest",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BLogoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
     "Method": "MarkTaskAsCompleted",
     "RelativePath": "api/Database/MarkTaskAsCompleted",
     "HttpMethod": "POST",
