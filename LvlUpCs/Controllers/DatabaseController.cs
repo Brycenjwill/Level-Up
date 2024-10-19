@@ -7,6 +7,7 @@ namespace LvlUpCs.Controllers
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
     using System.Text;
+    using static LvlUpCs.Controllers.DatabaseController;
 
     public class TokenService
     {
@@ -57,6 +58,13 @@ namespace LvlUpCs.Controllers
             public string Token { get; set; }
         }
 
+        public class MarkTaskCompletedRequest 
+        {
+            public int UserId { get; set; }
+            public int TaskId { get; set; }
+            public string Token { get; set; }
+        }
+
 
         private static string connectionString = "Server=levelup.cdkokcmcwbfz.us-east-2.rds.amazonaws.com;Database=levelup;User=admin;Password=ihack2024!;";
 
@@ -95,38 +103,69 @@ namespace LvlUpCs.Controllers
         }
 
         [HttpPost("MarkTaskAsCompleted")]
-        public IActionResult MarkTaskAsCompleted(int userid, int taskid)
+        public IActionResult MarkTaskAsCompleted([FromBody] MarkTaskCompletedRequest request)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string sql = "INSERT INTO user_completed_tasks (userid, taskid) VALUES (@userid, @taskid);";
 
-                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    // First, check if the provided token matches the one stored in the database for the given userid
+                    string checkTokenQuery = "SELECT sessionToken FROM users WHERE userid = @UserId";
+
+                    using (MySqlCommand checkTokenCmd = new MySqlCommand(checkTokenQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("userid", userid);
-                        cmd.Parameters.AddWithValue("taskid", taskid);
+                        checkTokenCmd.Parameters.AddWithValue("@UserId", request.UserId);
+                        string storedToken = null;
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        // Execute the query to get the session token from the database
+                        using (MySqlDataReader reader = checkTokenCmd.ExecuteReader())
                         {
-                            return Ok(true);  // Task marked as completed
+                            if (reader.Read())
+                            {
+                                storedToken = reader["sessionToken"] != DBNull.Value ? reader["sessionToken"].ToString() : null;
+                            }
+                            else
+                            {
+                                return NotFound(new { message = "User not found" });
+                            }
                         }
-                        else
+
+                        // Verify the token
+                        if (storedToken == null || storedToken != request.Token)
                         {
-                            return BadRequest("Couldn't add completed task to the database.");
+                            return Unauthorized(new { message = "Invalid token or user is not logged in" });
+                        }
+
+                        // If token is valid, proceed to mark the task as completed
+                        string insertQuery = "INSERT INTO user_completed_tasks (userid, taskid) VALUES (@UserId, @TaskId)";
+
+                        using (MySqlCommand insertCmd = new MySqlCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@UserId", request.UserId);
+                            insertCmd.Parameters.AddWithValue("@TaskId", request.TaskId);
+
+                            int rowsAffected = insertCmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                return Ok(new { message = "Task marked as completed" });
+                            }
+                            else
+                            {
+                                return BadRequest(new { message = "Couldn't add completed task to the database." });
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    return BadRequest(new { error = ex.Message });
+                    return StatusCode(500, new { error = ex.Message });
                 }
             }
         }
+
 
         [HttpPost("ValidateUserLogin")]
         public IActionResult ValidateUserLogin([FromBody] LoginRequest loginRequest)

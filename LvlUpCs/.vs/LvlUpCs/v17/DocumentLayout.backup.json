@@ -58,8 +58,7 @@
               "RelativeToolTip": "LvlUpCs.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-10-19T15:50:09.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T15:50:09.136Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T15:49:13.873Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T15:49:13.873Z"
             },
             {
               "$type": "Document",
@@ -83,8 +81,7 @@
               "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\LvlUpCs.csproj",
               "RelativeToolTip": "LvlUpCs.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-19T15:46:49.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T15:46:49.495Z"
             },
             {
               "$type": "Document",
@@ -94,10 +91,9 @@
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T13:57:50.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T13:57:50.294Z"
             },
             {
               "$type": "Document",
@@ -107,7 +103,7 @@
               "RelativeDocumentMoniker": "Controllers\\DatabaseController.cs",
               "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\DatabaseController.cs",
               "RelativeToolTip": "Controllers\\DatabaseController.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAAAAAOIAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwDUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T13:57:40.482Z",
               "EditorCaption": ""

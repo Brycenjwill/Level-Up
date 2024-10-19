@@ -76,14 +76,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userid",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "taskid",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BMarkTaskCompletedRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
