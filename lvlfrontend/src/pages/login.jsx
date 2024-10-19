@@ -4,13 +4,35 @@
 import React, { useState } from 'react';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-    console.log('Login submitted', { username, password });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const requestBody = {
+      Email: email,
+      Password: password
+    };
+
+    try {
+      const response = await fetch('https://lvlupcs.azurewebsites.net/api/Database/ValidateUserLogin', {
+        method: 'POST', // Specifies the request method
+        headers: {
+          'Content-Type': 'application/json' // Ensure the request is JSON
+        },
+        body: JSON.stringify(requestBody) // Stringify the body of the request
+      });
+
+      const result = await response.json(); // Parse the JSON response
+      if (response.ok) {
+        console.log('Success:', result);
+      } else {
+        console.error('Error:', result);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+    }
   };
 
   return (
@@ -21,9 +43,9 @@ const Login = () => {
           <label htmlFor="username">Username:</label>
           <input
             type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
