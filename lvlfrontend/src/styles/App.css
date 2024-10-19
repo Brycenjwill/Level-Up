@@ -34,6 +34,11 @@ html, body {
   height: 80vh; /* Full viewport height */
 }
 
+.carousel-inner {
+  position: fixed;
+  bottom: 0;
+}
+
 .carousel-item img {
   object-fit: cover; /* Ensures the image covers the entire area */
   height: 100%;
