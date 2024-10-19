@@ -1,0 +1,25 @@
+/* Header taking 20% of the page */
+.page-header {
+    flex: 0 0 20%; /* 20% of height */
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    justify-content: space-between; /* Space between the header text and login button */
+    align-items: center; /* Vertically center the content */
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  /* Style the login button */
+  .login-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
