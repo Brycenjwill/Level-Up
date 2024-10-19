@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "GetUserTasks",
+    "RelativePath": "api/Database/GetUserTasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sessionToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
     "Method": "InsertUser",
     "RelativePath": "api/Database/InsertNewUser",
     "HttpMethod": "POST",

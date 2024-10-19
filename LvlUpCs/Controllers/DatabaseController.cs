@@ -368,5 +368,90 @@ namespace LvlUpCs.Controllers
 			}
 		}
 
-	}
+        [HttpPost("GetUserTasks")]
+        public IActionResult GetUserTasks(int userid, string sessionToken)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // First, check if the provided token matches the one stored in the database for the given userid
+                    string checkTokenQuery = "SELECT sessionToken FROM users WHERE userid = @UserId";
+
+                    using (MySqlCommand checkTokenCmd = new MySqlCommand(checkTokenQuery, conn))
+                    {
+                        checkTokenCmd.Parameters.AddWithValue("@UserId", userid);
+                        string storedToken = null;
+
+                        // Execute the query to get the session token from the database
+                        using (MySqlDataReader reader = checkTokenCmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                storedToken = reader["sessionToken"] != DBNull.Value ? reader["sessionToken"].ToString() : null;
+                            }
+                            else
+                            {
+                                return NotFound(new { message = "User not found" });
+                            }
+                        }
+
+                        // Verify the token
+                        if (storedToken == null || storedToken != sessionToken)
+                        {
+                            return Unauthorized(new { message = "Invalid token or user is not logged in" });
+                        }
+                    }
+
+                    // Now, query all tasks from the database including title and tree_type (lowercase)
+                    string tasksQuery = @"
+                SELECT t.taskid, t.title, t.info, t.xp, 
+                       LOWER(t.tree_type) AS tree_type,  -- Convert tree_type to lowercase
+                       CASE WHEN uct.userid IS NOT NULL THEN true ELSE false END AS completed
+                FROM task t
+                LEFT JOIN user_completed_tasks uct ON t.taskid = uct.taskid AND uct.userid = @UserId";
+
+                    using (MySqlCommand tasksCmd = new MySqlCommand(tasksQuery, conn))
+                    {
+                        tasksCmd.Parameters.AddWithValue("@UserId", userid);
+
+                        using (MySqlDataReader reader = tasksCmd.ExecuteReader())
+                        {
+                            var tasks = new List<Dictionary<string, object>>();
+
+                            while (reader.Read())
+                            {
+                                var task = new Dictionary<string, object>
+                        {
+                            { "id", reader["taskid"] },
+                            { "title", reader["title"] },
+                            { "info", reader["info"] },
+                            { "xp", reader["xp"] },
+                            { "tree_type", reader["tree_type"] },  // Return lowercased tree_type
+                            { "completed", Convert.ToBoolean(reader["completed"]) }
+                        };
+
+                                tasks.Add(task);
+                            }
+
+                            return Ok(tasks);  // Return the tasks as JSON
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, new { message = "An error occurred: " + ex.Message });
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+
+
+    }
 }
