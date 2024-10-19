@@ -17,6 +17,58 @@
   },
   {
     "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "ConnectToDatabase",
+    "RelativePath": "api/Database/ConnectToDatabase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "InsertUser",
+    "RelativePath": "api/Database/InsertNewUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BCreateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "Logout",
+    "RelativePath": "api/Database/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoutRequest",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BLogoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
     "Method": "MarkTaskAsCompleted",
     "RelativePath": "api/Database/MarkTaskAsCompleted",
     "HttpMethod": "POST",
@@ -24,14 +76,25 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userid",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
+        "Name": "request",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BMarkTaskCompletedRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "ValidateUserLogin",
+    "RelativePath": "api/Database/ValidateUserLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "taskid",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "loginRequest",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BLoginRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -56,88 +119,5 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "ConnectToDatabase",
-    "RelativePath": "WeatherForecast/ConnectToDatabase",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "InsertUser",
-    "RelativePath": "WeatherForecast/InsertNewUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "ValidateUserLogin",
-    "RelativePath": "WeatherForecast/ValidateUserLogin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]
