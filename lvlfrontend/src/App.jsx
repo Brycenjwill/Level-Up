@@ -2,11 +2,9 @@
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Header from "./assets/header";
-import ControlledCarousel from "./assets/carousel";
 import '../src/styles/App.css';
-import '../src/styles/Header.css'
-import '../src/styles/Login.css'
+import '../src/styles/Header.css';
+import '../src/styles/Login.css';
 
 
 function App() {
