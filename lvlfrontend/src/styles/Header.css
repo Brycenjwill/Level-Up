@@ -23,12 +23,13 @@
     background-color: #0056b3; /* Darker shade on hover */
   }
 
-  #progressbox{
-    width: 200px;
-  }
 
   #total_progress{
-    width: 50%;
-    margin-top: 100px;
+    width: 40%;
+  }
+
+  .image {
+    width: 200%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
   }
   
