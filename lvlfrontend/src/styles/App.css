@@ -1,0 +1,41 @@
+
+#LoginButt {
+  float: right;
+}
+
+.carousel-control-prev{
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+.carousel-control-next{
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+header{
+  width: 100%;
+  height: 70%;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.active.carousel-item{
+  min-height: 100%;
+  background-color: black;
+}
