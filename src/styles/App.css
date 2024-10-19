@@ -6,12 +6,12 @@
 .carousel-control-prev{
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 3%;
 }
 .carousel-control-next{
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 3%;
 }
 
 body {
@@ -35,7 +35,7 @@ main {
   padding: 20px;
 }
 
-.tree {
-  min-height: 70%;
+.active.carousel-item{
+  min-height: 100%;
   background-color: black;
 }
