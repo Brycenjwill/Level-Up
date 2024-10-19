@@ -1,5 +1,42 @@
 [
   {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "CheckEmailExists",
+    "RelativePath": "api/Database/CheckEmailExists",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "MarkTaskAsCompleted",
+    "RelativePath": "api/Database/MarkTaskAsCompleted",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "taskid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
