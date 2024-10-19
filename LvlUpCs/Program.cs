@@ -35,14 +35,14 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-                .WithOrigins("http://localhost:3000", "https://your-react-app.com")  // Specify your React app domain
+                .WithOrigins("http://localhost:3000", "https://lvlmeup.club")  // Specify your React app domain
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
 });
 
 var app = builder.Build();
-
+app.UseCors("AllowSpecificOrigins");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
