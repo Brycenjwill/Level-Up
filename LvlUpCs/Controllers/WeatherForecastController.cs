@@ -133,14 +133,16 @@ namespace LvlUpCs.Controllers
 		public void InsertUser(string username, string password, string email)
 		{
 
-			if (DatabaseController.CheckEmailExists(email))
-			{
-				
-				return;
+            var controller = new DatabaseController();
+            var result = controller.CheckEmailExists(email) as OkObjectResult;
 
-			}
+            if (result != null && (bool)result.Value)
+            {
+                // Email exists, so return or handle it as needed
+                return;
+            }
 
-			string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
 			string connectionString = "Server=levelup.cdkokcmcwbfz.us-east-2.rds.amazonaws.com;Database=levelup;User=admin;Password=ihack2024!;";
 			using (MySqlConnection conn = new MySqlConnection(connectionString))
