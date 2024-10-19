@@ -7,7 +7,6 @@ namespace LvlUpCs.Controllers
     using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
     using System.Text;
-    using static LvlUpCs.Controllers.DatabaseController;
 
     public class TokenService
     {
@@ -68,8 +67,7 @@ namespace LvlUpCs.Controllers
 
         private static string connectionString = "Server=levelup.cdkokcmcwbfz.us-east-2.rds.amazonaws.com;Database=levelup;User=admin;Password=ihack2024!;";
 
-        [HttpPost("CheckEmailExists")]
-        public IActionResult CheckEmailExists(string email)
+        private IActionResult CheckEmailExists(string email)
         {
             bool emailExists = false;
 
@@ -311,50 +309,6 @@ namespace LvlUpCs.Controllers
                 }
             }
         }
-
-
-        // DEBUG: REMOVE ME
-        // Connect to database, query everything in user table.
-        [HttpGet("ConnectToDatabase")]
-		public string ConnectToDatabase()
-		{
-			string message = string.Empty;
-			using (MySqlConnection conn = new MySqlConnection(connectionString))
-			{
-				try
-				{
-					// Open the connection
-					conn.Open();
-					Console.WriteLine("Database connected successfully!");
-
-					// Example: Execute a SQL query (select or insert)
-					string sql = "SELECT * FROM users";
-					using (MySqlCommand cmd = new MySqlCommand(sql, conn))
-					{
-						using (MySqlDataReader reader = cmd.ExecuteReader())
-						{
-							while (reader.Read())
-							{
-								Console.WriteLine($"UserID: {reader["userid"]}, Username: {reader["username"]}");
-								message += $"UserID: {reader["userid"]}, Username: {reader["username"]}\n";
-							}
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					Console.WriteLine("An error occurred: " + ex.Message);
-					message = "An error occurred: " + ex.Message;
-				}
-				finally
-				{
-					// Close the connection
-					conn.Close();
-				}
-			}
-
-			return message;
-		}
 
 		///////////////// Connect to database, insert new user into user table.
 		[HttpPost("InsertNewUser")]
