@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "lxQAuATHhCyCp1OS7wjwGUMMSx3If13I0L4q3nG1ST4=",
+  "Hash": "yrMJW31qZe8CZna0c+3B/sGtTIwkKaA37vzFjTWJMqY=",
   "Source": "LvlUpCs",
   "BasePath": "_content/LvlUpCs",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }

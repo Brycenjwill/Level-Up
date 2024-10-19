@@ -17,6 +17,42 @@
   },
   {
     "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "ConnectToDatabase",
+    "RelativePath": "api/Database/ConnectToDatabase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "InsertUser",
+    "RelativePath": "api/Database/InsertNewUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newUser",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BCreateUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
     "Method": "MarkTaskAsCompleted",
     "RelativePath": "api/Database/MarkTaskAsCompleted",
     "HttpMethod": "POST",
@@ -32,6 +68,22 @@
         "Name": "taskid",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LvlUpCs.Controllers.DatabaseController",
+    "Method": "ValidateUserLogin",
+    "RelativePath": "api/Database/ValidateUserLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "LvlUpCs.Controllers.DatabaseController\u002BLoginRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -56,57 +108,5 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "ConnectToDatabase",
-    "RelativePath": "WeatherForecast/ConnectToDatabase",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "InsertUser",
-    "RelativePath": "WeatherForecast/InsertNewUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "newUser",
-        "Type": "LvlUpCs.Controllers.CreateUserRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LvlUpCs.Controllers.WeatherForecastController",
-    "Method": "ValidateUserLogin",
-    "RelativePath": "WeatherForecast/ValidateUserLogin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginRequest",
-        "Type": "LvlUpCs.Controllers.LoginRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   }
 ]
