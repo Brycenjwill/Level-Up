@@ -19,8 +19,19 @@ namespace LvlUpCs.Controllers
 			public string Email { get; set; }
 		}
 
+		public class MarkTaskCompletedRequest
+		{
+			public Int32 UserId { get; set; }
+			public Int32 TaskId { get; set; }
+		}
+
 		private static string connectionString = "Server=levelup.cdkokcmcwbfz.us-east-2.rds.amazonaws.com;Database=levelup;User=admin;Password=ihack2024!;";
 
+		/// <summary>
+		/// DEBUG: REMOVE ME! This is a private method, not an API endpoint.
+		/// </summary>
+		/// <param name="email"></param>
+		/// <returns></returns>
         [HttpPost("CheckEmailExists")]
         public IActionResult CheckEmailExists(string email)
         {
@@ -56,7 +67,7 @@ namespace LvlUpCs.Controllers
         }
 
         [HttpPost("MarkTaskAsCompleted")]
-        public IActionResult MarkTaskAsCompleted(int userid, int taskid)
+        public IActionResult MarkTaskAsCompleted([FromBody] MarkTaskCompletedRequest taskInfo)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -67,8 +78,8 @@ namespace LvlUpCs.Controllers
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conn))
                     {
-                        cmd.Parameters.AddWithValue("userid", userid);
-                        cmd.Parameters.AddWithValue("taskid", taskid);
+                        cmd.Parameters.AddWithValue("userid", taskInfo.UserId);
+                        cmd.Parameters.AddWithValue("taskid", taskInfo.TaskId);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
 
@@ -146,7 +157,6 @@ namespace LvlUpCs.Controllers
 				return Unauthorized(new { message = "Invalid username or password" });
 			}
 		}
-
 
 		// DEBUG: REMOVE ME
 		// Connect to database, query everything in user table.
