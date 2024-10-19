@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlMeUp\\LvlMeUp.Server\\..\\lvlmeup.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

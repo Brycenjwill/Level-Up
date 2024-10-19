@@ -1,0 +1,6 @@
+@LvlMeUp.Server_HostAddress = http://localhost:5247
+
+GET {{LvlMeUp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
