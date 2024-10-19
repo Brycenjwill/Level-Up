@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlUpCs\\",
+  "WorkspaceRootPath": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\joshj\\documents\\level-up\\lvlupcs\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\bryce\\documents\\github\\level-up\\lvlupcs\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|solutionrelative:controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\joshj\\documents\\level-up\\lvlupcs\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\bryce\\documents\\github\\level-up\\lvlupcs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\bryce\\documents\\github\\level-up\\lvlupcs\\lvlupcs.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|solutionrelative:lvlupcs.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\bryce\\documents\\github\\level-up\\lvlupcs\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|c:\\users\\bryce\\documents\\github\\level-up\\lvlupcs\\lvlupcs.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{588023D3-580E-4FE5-836F-1CD3DC4F4B14}|LvlUpCs.csproj|solutionrelative:lvlupcs.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,14 +45,56 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LvlUpCs.http",
+              "DocumentMoniker": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\LvlUpCs.http",
+              "RelativeDocumentMoniker": "LvlUpCs.http",
+              "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\LvlUpCs.http",
+              "RelativeToolTip": "LvlUpCs.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-10-19T15:50:09.136Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T15:49:13.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LvlUpCs",
+              "DocumentMoniker": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\LvlUpCs.csproj",
+              "RelativeDocumentMoniker": "LvlUpCs.csproj",
+              "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\LvlUpCs.csproj",
+              "RelativeToolTip": "LvlUpCs.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-19T15:46:49.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlUpCs\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlUpCs\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T13:57:50.294Z",
               "EditorCaption": ""
@@ -49,11 +103,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DatabaseController.cs",
-              "DocumentMoniker": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlUpCs\\Controllers\\DatabaseController.cs",
+              "DocumentMoniker": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\DatabaseController.cs",
               "RelativeDocumentMoniker": "Controllers\\DatabaseController.cs",
-              "ToolTip": "C:\\Users\\joshj\\Documents\\Level-Up\\LvlUpCs\\Controllers\\DatabaseController.cs",
+              "ToolTip": "C:\\Users\\bryce\\Documents\\GitHub\\Level-Up\\LvlUpCs\\Controllers\\DatabaseController.cs",
               "RelativeToolTip": "Controllers\\DatabaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAAAOIAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T13:57:40.482Z",
               "EditorCaption": ""
